@@ -32,19 +32,20 @@ export const skills = {
 
 export const projects = [
   {
-    title: "CyberTrace AI - Financial Fraud & Intelligence",
+    title: "CyberTrace AI - Advanced Financial Fraud & Intelligence Platform",
     role: "Full Stack AI Engineer",
     timeline: "Jul 2026 – Present",
-    outcome: "Designed an intelligent threat-analysis pipeline that transforms unstructured cybersecurity intelligence into structured, analyst-oriented insights.",
-    problem: "Financial fraud detection requires manual analysis of diverse, unstructured documents across multiple languages, making real-time threat intelligence difficult.",
-    solution: "Developed a real-time platform with a multi-tier OCR pipeline, deterministic graph analytics for mule-account detection, and a live-updating threat dashboard.",
-    technologies: ["React", "Django", "LangGraph", "YOLOv8", "Tesseract OCR", "ChromaDB", "Framer Motion"],
+    outcome: "Built an enterprise-grade investigation portal for Law Enforcement Agencies (LEAs) featuring deep graph analytics, an AI-powered evidence locker, and context-aware RAG querying.",
+    problem: "LEAs struggle with manual forensics, unstructured financial data across multiple languages, and disconnected OSINT threat intelligence in fraud cases.",
+    solution: "Engineered a platform with a multi-tier OCR pipeline (PyMuPDF/Tesseract/YOLOv8), iterative graph analytics for cycle detection, and a DeepAgents sandboxed execution environment.",
+    technologies: ["React 18", "TypeScript", "Django DRF", "LangChain", "LangGraph", "DeepAgents", "YOLOv8", "ChromaDB", "Zustand"],
     highlights: [
-      "Extracted entities from FIRs and bank statements across English, Hindi, and Gujarati with 90-96% accuracy.",
-      "Visualized deterministic graph analytics (DFS cycle detection, layering path tracing) using React Force Graph 2D.",
-      "Secured chain-of-custody integrity with SHA-256 hash generation and JWT authentication."
+      "Developed deep graph analytics using iterative Directed DFS for cycle detection and layering path tracing for mule account classification.",
+      "Built an AI-Powered Evidence Locker with a multi-tier OCR extraction pipeline mapped for Indian financial data (Devanagari, Gujarati, UPI IDs).",
+      "Integrated Sandboxed Execution via LocalShellBackend and multi-layered LangChain guardrails to eliminate RCE and prevent prompt injections (OWASP Compliant).",
+      "Maintained strict secure chain-of-custody by generating cryptographic SHA-256 hashes for every uploaded FIR/CSV to guarantee courtroom admissibility."
     ],
-    github: "https://github.com/utsav210",
+    github: "https://github.com/utsav210/cybertrace-ai",
     demo: "#"
   },
   {
