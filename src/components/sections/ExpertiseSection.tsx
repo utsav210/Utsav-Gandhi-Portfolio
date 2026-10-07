@@ -36,7 +36,7 @@ const ExpertiseSection = () => {
               <div className="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary font-bold">
                 {category.charAt(0).toUpperCase()}
               </div>
-              <h3 className="text-lg font-bold text-white tracking-wide">{category.replace('_', ' ').toUpperCase()}</h3>
+              <h3 className="text-lg font-bold text-white tracking-wide">{category.toUpperCase()}</h3>
             </div>
             
             <div className="flex flex-wrap gap-2.5">

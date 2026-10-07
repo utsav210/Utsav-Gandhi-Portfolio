@@ -11,16 +11,20 @@ export const personalInfo = {
 };
 
 export const skills = {
-  ai_ml: [
+  "AI & Machine Learning": [
     "TensorFlow", "scikit-learn", "XGBoost", "AdaBoost", "Gradient Boosting",
     "Random Forest", "Bagging & Stacking", "K-Means", "DBSCAN", 
     "Hyperparameter Tuning", "SVM", "Pandas", "NumPy"
   ],
-  gen_ai: ["LangChain", "LangGraph", "CrewAI", "Sentence-Transformers", "Prompt Engineering", "RAG", "Mistral AI", "Groq API"],
-  software_engineering: ["Python", "JavaScript", "TypeScript", "React.js", "Next.js", "Django", "Node.js", "FastAPI"],
-  databases: ["PostgreSQL", "MongoDB", "SQLite", "Redis", "ChromaDB", "FAISS"],
-  cloud_devops: ["Docker", "Vercel", "AWS"],
-  cybersecurity: ["OWASP Top 10", "VAPT", "SIEM (Wazuh)", "Prompt Injection Defense", "Guardrail Design"]
+  "GenAI & Agentic AI": [
+    "Large Language Models (LLMs)", "Agentic Orchestration", "LangChain", 
+    "LangGraph", "CrewAI", "qLoRA", "PEFT", "Hugging Face", 
+    "Transformers", "RAG", "Prompt Engineering", "Mistral AI", "Groq API"
+  ],
+  "Software Engineering": ["Python", "JavaScript", "TypeScript", "React.js", "Next.js", "Django", "Node.js", "FastAPI"],
+  "Databases & Vector Stores": ["PostgreSQL", "MongoDB", "SQLite", "Redis", "ChromaDB", "FAISS"],
+  "Cloud & DevOps": ["Docker", "Vercel", "AWS"],
+  "Cybersecurity & AI Safety": ["OWASP Top 10", "VAPT", "SIEM (Wazuh)", "Prompt Injection Defense", "Guardrail Design"]
 };
 
 export const projects = [
