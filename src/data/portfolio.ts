@@ -23,7 +23,7 @@ export const skills = {
   ],
   "Software Engineering": [
     "Python", "JavaScript", "TypeScript", "Data Structures & Algorithms (DSA)", 
-    "React.js", "Next.js", "Django", "Node.js", "FastAPI", "Pydantic"
+    "React.js", "Django", "Node.js", "FastAPI", "Pydantic"
   ],
   "Databases & Vector Stores": ["PostgreSQL", "MongoDB", "SQLite", "Redis", "ChromaDB", "FAISS"],
   "Cloud & Developer Tools": ["AWS", "Docker", "CI/CD", "Git & GitHub", "VS Code", "Vercel"],
