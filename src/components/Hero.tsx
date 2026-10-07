@@ -73,44 +73,32 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Visual Element - AI Pipeline Concept */}
+          {/* Visual Element - Profile Picture */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2 }}
             className="hidden lg:block relative"
           >
-            <div className="aspect-square max-w-[500px] ml-auto relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-surface to-background border border-surface-hover rounded-2xl shadow-2xl overflow-hidden flex items-center justify-center p-8">
-                {/* Abstract Node Network */}
-                <div className="w-full h-full relative font-mono text-xs text-text-muted flex flex-col justify-between">
-                  <div className="flex justify-between items-center w-full">
-                    <div className="p-3 border border-surface-hover rounded bg-surface text-text-secondary">USER_INTENT</div>
-                    <div className="h-px bg-surface-hover flex-1 mx-2" />
-                    <div className="p-3 border border-primary/30 rounded bg-primary/5 text-primary">PLANNER_AGENT</div>
-                  </div>
-                  
-                  <div className="flex justify-center my-4 opacity-50">
-                    <div className="w-px h-16 bg-gradient-to-b from-primary/50 to-transparent" />
-                  </div>
-
-                  <div className="flex justify-between items-center w-full">
-                    <div className="p-3 border border-surface-hover rounded bg-surface">RETRIEVAL (RAG)</div>
-                    <div className="p-3 border border-surface-hover rounded bg-surface">TOOL_EXECUTION</div>
-                    <div className="p-3 border border-surface-hover rounded bg-surface">LLM_CORE</div>
-                  </div>
-                  
-                  <div className="flex justify-center my-4 opacity-50">
-                    <div className="w-px h-16 bg-gradient-to-t from-primary/50 to-transparent" />
-                  </div>
-
-                  <div className="flex justify-center items-center w-full">
-                    <div className="h-px bg-surface-hover w-12 mr-2" />
-                    <div className="p-3 border border-green-500/30 rounded bg-green-500/5 text-green-400">STRUCTURED_OUTPUT</div>
-                    <div className="h-px bg-surface-hover w-12 ml-2" />
-                  </div>
-                </div>
-              </div>
+            <div className="aspect-[4/5] max-w-[420px] ml-auto relative group">
+              {/* Glowing Background Blob */}
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-[80px] group-hover:bg-primary/30 transition-colors duration-700" />
+              
+              {/* Image Container */}
+              <motion.div 
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="relative w-full h-full rounded-[2.5rem] overflow-hidden border border-surface-border bg-surface shadow-2xl z-10"
+              >
+                <img 
+                  src="/profile.jpeg" 
+                  alt={personalInfo.name} 
+                  className="w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-700"
+                />
+                
+                {/* Subtle glass overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-background/60 via-transparent to-primary/20 pointer-events-none mix-blend-overlay" />
+              </motion.div>
             </div>
           </motion.div>
 
