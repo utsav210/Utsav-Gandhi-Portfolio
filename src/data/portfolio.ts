@@ -7,7 +7,7 @@ export const personalInfo = {
   location: "Ahmedabad, Gujarat, India",
   linkedin: "https://linkedin.com/in/utsavgandhi210",
   github: "https://github.com/utsav210",
-  resume: "/resume.pdf"
+  resume: "/Utsav_Gandhi_AI_ML_Engineer_Resume.pdf"
 };
 
 export const skills = {
