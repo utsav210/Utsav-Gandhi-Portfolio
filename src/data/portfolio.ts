@@ -19,14 +19,14 @@ export const skills = {
   "GenAI & Agentic AI": [
     "Large Language Models (LLMs)", "Agentic Orchestration", "LangChain", 
     "LangGraph", "CrewAI", "qLoRA", "PEFT", "Hugging Face", 
-    "Transformers", "RAG", "Prompt Engineering", "Mistral AI", "Groq API"
+    "Transformers", "RAG", "Prompt Engineering", "Claude", "Mistral AI", "Groq API"
   ],
   "Software Engineering": [
     "Python", "JavaScript", "TypeScript", "Data Structures & Algorithms (DSA)", 
     "React.js", "Django", "Node.js", "FastAPI", "Pydantic"
   ],
   "Databases & Vector Stores": ["PostgreSQL", "MongoDB", "SQLite", "Redis", "ChromaDB", "FAISS"],
-  "Cloud & Developer Tools": ["AWS", "Docker", "CI/CD", "Git & GitHub", "VS Code", "Vercel"],
+  "Cloud & Developer Tools": ["AWS", "Docker", "CI/CD", "Git & GitHub", "VS Code", "Vercel", "Antigravity"],
   "Cybersecurity & AI Safety": ["OWASP Top 10", "VAPT", "SIEM (Wazuh)", "Prompt Injection Defense", "Guardrail Design"]
 };
 
