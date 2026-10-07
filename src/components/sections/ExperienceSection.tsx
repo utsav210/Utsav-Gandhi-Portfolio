@@ -7,7 +7,7 @@ const ExperienceSection = () => {
   return (
     <SectionWrapper id="experience" title="Professional Experience">
       <div>
-        <div className="max-w-4xl space-y-16">
+        <div className="max-w-5xl space-y-12">
           {experience.map((job, index) => (
             <motion.div 
               key={job.role}
@@ -17,23 +17,26 @@ const ExperienceSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="relative pl-8 md:pl-10 border-l border-surface-border group"
             >
-              <div className="absolute w-4 h-4 bg-surface border-2 border-primary rounded-full -left-[9px] top-1 group-hover:bg-primary transition-colors duration-300 shadow-[0_0_10px_rgba(79,70,229,0.5)]" />
+              <div className="absolute w-4 h-4 bg-surface border-2 border-primary rounded-full -left-[9px] top-10 group-hover:bg-primary transition-colors duration-300 shadow-[0_0_10px_rgba(79,70,229,0.5)]" />
               
-              <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-3">
-                <h3 className="text-2xl font-bold text-white group-hover:text-primary-light transition-colors">{job.role}</h3>
-                <span className="text-primary font-mono text-sm mt-2 md:mt-0 bg-primary/10 px-3 py-1 rounded-full">{job.timeline}</span>
+              <div className="glass-panel p-8 md:p-10 rounded-3xl hover:border-primary/30 transition-colors">
+                <div className="flex flex-col lg:flex-row lg:items-baseline lg:justify-between mb-4 gap-4">
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-primary-light transition-colors">{job.role}</h3>
+                    <p className="text-text-primary text-lg mt-2 font-medium">{job.company} <span className="text-text-muted ml-2">— {job.location}</span></p>
+                  </div>
+                  <span className="inline-flex text-primary font-mono text-sm bg-primary/10 px-4 py-2 rounded-full self-start">{job.timeline}</span>
+                </div>
+                
+                <ul className="space-y-4 mt-8">
+                  {job.points.map((point, i) => (
+                    <li key={i} className="text-text-secondary flex items-start font-light leading-relaxed">
+                      <span className="text-primary/50 mr-4 mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 shadow-[0_0_8px_rgba(79,70,229,0.8)]" />
+                      <span className="text-base">{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              
-              <p className="text-text-primary text-lg mb-6 font-medium">{job.company} — <span className="text-text-muted">{job.location}</span></p>
-              
-              <ul className="space-y-4">
-                {job.points.map((point, i) => (
-                  <li key={i} className="text-text-secondary flex items-start font-light leading-relaxed">
-                    <span className="text-primary/50 mr-4 mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
             </motion.div>
           ))}
         </div>
