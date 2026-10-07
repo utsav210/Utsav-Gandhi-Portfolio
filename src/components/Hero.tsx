@@ -91,7 +91,7 @@ const Hero = () => {
                 className="relative w-full h-full rounded-[2.5rem] overflow-hidden border border-surface-border bg-surface shadow-2xl z-10"
               >
                 <img 
-                  src="/profile.jpeg" 
+                  src={`${import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL.replace(/\/$/, '')}/profile.jpeg`} 
                   alt={personalInfo.name} 
                   className="w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-700"
                 />

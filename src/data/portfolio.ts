@@ -7,7 +7,7 @@ export const personalInfo = {
   location: "Ahmedabad, Gujarat, India",
   linkedin: "https://linkedin.com/in/utsavgandhi210",
   github: "https://github.com/utsav210",
-  resume: "/Utsav_Gandhi_AI_ML_Engineer_Resume.pdf"
+  resume: `${import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL.replace(/\/$/, '')}/Utsav_Gandhi_AI_ML_Engineer_Resume.pdf`
 };
 
 export const skills = {
