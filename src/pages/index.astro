@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import SectionWrapper from '../components/SectionWrapper';
 import AboutSection from '../components/sections/AboutSection';
 import ExpertiseSection from '../components/sections/ExpertiseSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
@@ -20,30 +19,12 @@ const toId = (str: string) => str.toLowerCase().replace(/[^a-z0-9]+/g, '-');
   
   <main>
     <Hero client:load />
-
-    <SectionWrapper id="about" title="Engineering Philosophy" subtitle="How I approach building intelligent systems." client:visible>
-      <AboutSection client:visible />
-    </SectionWrapper>
-
-    <SectionWrapper id="expertise" title="Technical Expertise" subtitle="Technologies and domains I work with in production." client:visible>
-      <ExpertiseSection client:visible />
-    </SectionWrapper>
-
-    <SectionWrapper id="projects" title="Featured Projects" subtitle="Systems I've architected and built." client:visible>
-      <ProjectsSection client:visible />
-    </SectionWrapper>
-
-    <SectionWrapper id="experience" title="Professional Experience" client:visible>
-      <ExperienceSection client:visible />
-    </SectionWrapper>
-
-    <SectionWrapper id="services" title="What I Can Build" subtitle="Freelance & Consulting Services" client:visible>
-      <ServicesSection client:visible />
-    </SectionWrapper>
-
-    <div id="contact" className="py-32">
-      <ContactSection client:visible />
-    </div>
+    <AboutSection client:visible />
+    <ExpertiseSection client:visible />
+    <ProjectsSection client:visible />
+    <ExperienceSection client:visible />
+    <ServicesSection client:visible />
+    <ContactSection client:visible />
   </main>
   
   <footer className="py-8 text-center text-text-muted text-sm border-t border-surface-border mt-20 relative z-10 bg-background/80 backdrop-blur-md">
