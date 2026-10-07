@@ -41,7 +41,8 @@ export const projects = [
     technologies: ["React 18", "TypeScript", "Django DRF", "LangChain", "LangGraph", "DeepAgents", "RAG", "YOLOv8", "ChromaDB", "Zustand"],
     highlights: [
       "Developed deep graph analytics using iterative Directed DFS for cycle detection and layering path tracing for mule account classification.",
-      "Built an AI-Powered Evidence Locker with a multi-tier OCR extraction pipeline mapped for Indian financial data (Devanagari, Gujarati, UPI IDs).",
+      "Built an AI-powered RAG pipeline-based Evidence Locker featuring a multi-tier OCR extraction pipeline mapped for Indian financial data (Devanagari, Gujarati, UPI IDs).",
+      "Integrated an end-to-end RAG pipeline between the vector database and the LLM, enabling precise, beneficiary-specific applicable sections retrieval via semantic similarity search across 80+ indexed sections.",
       "Integrated Sandboxed Execution via LocalShellBackend and multi-layered LangChain guardrails to eliminate RCE and prevent prompt injections (OWASP Compliant).",
       "Maintained strict secure chain-of-custody by generating cryptographic SHA-256 hashes for every uploaded FIR/CSV to guarantee courtroom admissibility."
     ],
