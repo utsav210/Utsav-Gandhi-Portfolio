@@ -38,7 +38,7 @@ export const projects = [
     outcome: "Built an enterprise-grade investigation portal for Law Enforcement Agencies (LEAs) featuring deep graph analytics, an AI-powered evidence locker, and context-aware RAG querying.",
     problem: "LEAs struggle with manual forensics, unstructured financial data across multiple languages, and disconnected OSINT threat intelligence in fraud cases.",
     solution: "Engineered a platform with a multi-tier OCR pipeline (PyMuPDF/Tesseract/YOLOv8), iterative graph analytics for cycle detection, and a DeepAgents sandboxed execution environment.",
-    technologies: ["React 18", "TypeScript", "Django DRF", "LangChain", "LangGraph", "DeepAgents", "YOLOv8", "ChromaDB", "Zustand"],
+    technologies: ["React 18", "TypeScript", "Django DRF", "LangChain", "LangGraph", "DeepAgents", "RAG", "YOLOv8", "ChromaDB", "Zustand"],
     highlights: [
       "Developed deep graph analytics using iterative Directed DFS for cycle detection and layering path tracing for mule account classification.",
       "Built an AI-Powered Evidence Locker with a multi-tier OCR extraction pipeline mapped for Indian financial data (Devanagari, Gujarati, UPI IDs).",
