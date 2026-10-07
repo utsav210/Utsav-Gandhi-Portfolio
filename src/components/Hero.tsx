@@ -78,9 +78,9 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="hidden lg:block relative"
+            className="relative mt-12 lg:mt-0 w-full flex justify-center lg:justify-end"
           >
-            <div className="aspect-[4/5] max-w-[420px] ml-auto relative group">
+            <div className="aspect-[4/5] w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] relative group">
               {/* Glowing Background Blob */}
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-[80px] group-hover:bg-primary/30 transition-colors duration-700" />
               
