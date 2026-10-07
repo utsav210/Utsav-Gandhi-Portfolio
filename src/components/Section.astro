@@ -1,0 +1,24 @@
+---
+interface Props {
+  id?: string;
+  title: string;
+  subtitle?: string;
+  className?: string;
+}
+
+const { id, title, subtitle, className = "" } = Astro.props;
+---
+
+<section id={id} className={`py-24 relative ${className}`}>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
+        {title}
+        <span className="text-primary">.</span>
+      </h2>
+      {subtitle && <p className="text-text-secondary text-lg max-w-2xl">{subtitle}</p>}
+    </div>
+    
+    <slot />
+  </div>
+</section>

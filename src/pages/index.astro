@@ -1,16 +1,147 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { personalInfo, skills, projects, experience, services, education } from '../data/portfolio';
+
+// Utility for formatting section IDs
+const toId = (str: string) => str.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title={`${personalInfo.name} | ${personalInfo.headline}`}>
+  <Navbar client:load />
+  
+  <main>
+    <Hero client:load />
+
+    <!-- About Section -->
+    <Section id="about" title="Engineering Philosophy" subtitle="How I approach building intelligent systems.">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 text-text-secondary text-lg leading-relaxed">
+          <p>
+            I don't merely know AI technologies. I understand problems, architect solutions, build systems, integrate AI into real applications, and deliver production-oriented software.
+          </p>
+          <p>
+            With a background intersecting <strong class="text-white">Generative AI, Machine Learning, and Cybersecurity</strong>, I focus on building systems that are not just intelligent, but secure, performant, and reliable. My current research explores AI-safety principles applied to multi-agent LLM pipelines.
+          </p>
+          <p>
+            Whether it's reducing API latency by 40% or architecting an intent-driven LangGraph workflow, I prioritize engineering discipline over hype.
+          </p>
+        </div>
+        
+        <div class="card-hover p-8 border border-primary/20 bg-primary/5">
+          <h3 class="font-mono text-primary mb-4 text-sm">## CORE_PRINCIPLES</h3>
+          <ul class="space-y-4 font-mono text-sm">
+            <li class="flex items-center gap-3"><span class="text-primary">{`>`}</span> Evidence over Claims</li>
+            <li class="flex items-center gap-3"><span class="text-primary">{`>`}</span> Outcomes over Technologies</li>
+            <li class="flex items-center gap-3"><span class="text-primary">{`>`}</span> Security by Design</li>
+            <li class="flex items-center gap-3"><span class="text-primary">{`>`}</span> Simplicity in Architecture</li>
+          </ul>
+        </div>
+      </div>
+    </Section>
+
+    <!-- Expertise Section -->
+    <Section id="expertise" title="Technical Expertise" subtitle="Technologies and domains I work with in production.">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {Object.entries(skills).map(([category, items]) => (
+          <div class="bg-surface border border-surface-hover rounded-xl p-6">
+            <h3 class="text-lg font-semibold text-white mb-4 uppercase tracking-wider text-sm">{category.replace('_', ' ')}</h3>
+            <div class="flex flex-wrap gap-2">
+              {items.map(skill => (
+                <span class="px-3 py-1.5 rounded-lg bg-surface-hover text-text-secondary text-sm font-medium">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </Section>
+
+    <!-- Projects Section -->
+    <Section id="projects" title="Featured Projects" subtitle="Systems I've architected and built.">
+      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        {projects.map(project => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    </Section>
+
+    <!-- Experience Section -->
+    <Section id="experience" title="Professional Experience">
+      <div class="max-w-4xl space-y-12">
+        {experience.map(job => (
+          <div class="relative pl-8 border-l border-surface-hover">
+            <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1 border-4 border-background" />
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+              <h3 class="text-xl font-bold text-white">{job.role}</h3>
+              <span class="text-primary font-mono text-sm">{job.timeline}</span>
+            </div>
+            <p class="text-text-muted mb-4 font-medium">{job.company} — {job.location}</p>
+            <ul class="space-y-3">
+              {job.points.map(point => (
+                <li class="text-text-secondary flex items-start">
+                  <span class="text-primary/50 mr-3 mt-1.5">▪</span>
+                  <span class="leading-relaxed">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      
+      <div class="mt-20">
+        <h3 class="text-2xl font-bold text-white mb-8">Education</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {education.map(edu => (
+            <div class="p-6 bg-surface border border-surface-hover rounded-xl">
+              <h4 class="font-bold text-white mb-1">{edu.degree}</h4>
+              <p class="text-text-muted text-sm mb-4">{edu.institution} | {edu.timeline}</p>
+              <p class="text-text-secondary text-sm font-mono bg-background p-3 rounded-md">{edu.details}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+
+    <!-- Services Section -->
+    <Section id="services" title="What I Can Build" subtitle="Freelance & Consulting Services">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {services.map(service => (
+          <div class="card-hover p-8 border border-surface-hover group">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
+            <p class="text-text-secondary mb-6 leading-relaxed">{service.description}</p>
+            <div class="flex flex-wrap gap-2">
+              {service.technologies.map(tech => (
+                <span class="px-2 py-1 rounded bg-background text-xs font-mono text-text-muted">{tech}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </Section>
+
+    <!-- Contact Section -->
+    <Section id="contact" title="Get in Touch" className="border-t border-surface-hover mt-24">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-lg text-text-secondary mb-8">
+          Whether you're a recruiter looking for a forward-deployed engineer or a client needing an AI solution, my inbox is open.
+        </p>
+        <a 
+          href={`mailto:${personalInfo.email}`}
+          class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary-light transition-all hover:scale-105 shadow-lg shadow-primary/20"
+        >
+          Say Hello
+        </a>
+      </div>
+    </Section>
+
+  </main>
+  
+  <footer class="py-8 text-center text-text-muted text-sm border-t border-surface-hover mt-20">
+    <p>© {new Date().getFullYear()} {personalInfo.name}. All rights reserved.</p>
+  </footer>
+</Layout>
