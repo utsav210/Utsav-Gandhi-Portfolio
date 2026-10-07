@@ -15,8 +15,8 @@
   --color-accent: #06B6D4; /* Cyan 500 */
   
   --color-text-primary: #ffffff;
-  --color-text-secondary: #a1a1aa; /* zinc-400 */
-  --color-text-muted: #52525b; /* zinc-600 */
+  --color-text-secondary: #d4d4d8; /* zinc-300 for crisp paragraph readability */
+  --color-text-muted: #a1a1aa; /* zinc-400 for highly legible muted text */
 }
 
 @layer base {

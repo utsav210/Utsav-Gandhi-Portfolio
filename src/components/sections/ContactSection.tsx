@@ -13,8 +13,16 @@ const ContactSection = () => {
         transition={{ duration: 0.8 }}
         className="max-w-3xl mx-auto text-center glass-panel p-12 md:p-20 rounded-3xl relative overflow-hidden"
       >
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-[100px]" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/20 rounded-full blur-[100px]" />
+        <motion.div 
+          animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2] }} 
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-40 -right-40 w-80 h-80 bg-primary rounded-full blur-[100px]" 
+        />
+        <motion.div 
+          animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.5, 0.2] }} 
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent rounded-full blur-[100px]" 
+        />
         
         <div className="relative z-10">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Let's build something <span className="text-gradient">intelligent.</span></h2>
