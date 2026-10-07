@@ -12,13 +12,9 @@ export const personalInfo = {
 
 export const skills = {
   ai_ml: [
-    "scikit-learn & TensorFlow",
-    "XGBoost & Gradient Boosting",
-    "Ensemble Learning (Bagging, Stacking, Random Forest)",
-    "Clustering (K-Means, DBSCAN)",
-    "SVM & Classical ML",
-    "Hyperparameter Tuning",
-    "Pandas & NumPy"
+    "TensorFlow", "scikit-learn", "XGBoost", "AdaBoost", "Gradient Boosting",
+    "Random Forest", "Bagging & Stacking", "K-Means", "DBSCAN", 
+    "Hyperparameter Tuning", "SVM", "Pandas", "NumPy"
   ],
   gen_ai: ["LangChain", "LangGraph", "CrewAI", "Sentence-Transformers", "Prompt Engineering", "RAG", "Mistral AI", "Groq API"],
   software_engineering: ["Python", "JavaScript", "TypeScript", "React.js", "Next.js", "Django", "Node.js", "FastAPI"],
