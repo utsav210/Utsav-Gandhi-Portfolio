@@ -11,7 +11,15 @@ export const personalInfo = {
 };
 
 export const skills = {
-  ai_ml: ["scikit-learn", "TensorFlow", "Pandas", "NumPy", "Logistic Regression", "Random Forest", "SVM", "KNN"],
+  ai_ml: [
+    "scikit-learn & TensorFlow",
+    "XGBoost & Gradient Boosting",
+    "Ensemble Learning (Bagging, Stacking, Random Forest)",
+    "Clustering (K-Means, DBSCAN)",
+    "SVM & Classical ML",
+    "Hyperparameter Tuning",
+    "Pandas & NumPy"
+  ],
   gen_ai: ["LangChain", "LangGraph", "CrewAI", "Sentence-Transformers", "Prompt Engineering", "RAG", "Mistral AI", "Groq API"],
   software_engineering: ["Python", "JavaScript", "TypeScript", "React.js", "Next.js", "Django", "Node.js", "FastAPI"],
   databases: ["PostgreSQL", "MongoDB", "SQLite", "Redis", "ChromaDB", "FAISS"],
