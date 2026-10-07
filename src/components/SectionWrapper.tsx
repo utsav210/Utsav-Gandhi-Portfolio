@@ -13,7 +13,7 @@ const SectionWrapper: React.FC<SectionProps> = ({ id, title, subtitle, children,
   return (
     <section id={id} className={`py-24 relative ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {title && (
+        {title && title.trim().length > 0 && (
           <motion.div 
             className="mb-16"
             initial={{ opacity: 0, y: 30 }}
