@@ -25,7 +25,7 @@ const AboutSection = () => {
             I don't merely know AI technologies. I understand problems, architect solutions, build systems, integrate AI into real applications, and deliver production-oriented software.
           </p>
           <p>
-            With a background intersecting <strong className="text-white font-medium">Generative AI, Machine Learning, and Cybersecurity</strong>, I focus on building systems that are not just intelligent, but secure, performant, and reliable. My current research explores AI-safety principles applied to multi-agent LLM pipelines.
+            With a background intersecting <strong className="text-white font-medium">Generative AI, Agentic AI, Machine Learning, and Cybersecurity</strong>, I focus on building systems that are not just intelligent, but secure, performant, and reliable. My current research explores AI-safety principles applied to multi-agent LLM pipelines.
           </p>
           <p>
             Whether it's reducing API latency by 40% or architecting an intent-driven LangGraph workflow, I prioritize engineering discipline over hype.
