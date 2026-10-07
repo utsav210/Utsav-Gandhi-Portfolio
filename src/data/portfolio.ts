@@ -21,9 +21,12 @@ export const skills = {
     "LangGraph", "CrewAI", "qLoRA", "PEFT", "Hugging Face", 
     "Transformers", "RAG", "Prompt Engineering", "Mistral AI", "Groq API"
   ],
-  "Software Engineering": ["Python", "JavaScript", "TypeScript", "React.js", "Next.js", "Django", "Node.js", "FastAPI"],
+  "Software Engineering": [
+    "Python", "JavaScript", "TypeScript", "Data Structures & Algorithms (DSA)", 
+    "React.js", "Next.js", "Django", "Node.js", "FastAPI", "Pydantic"
+  ],
   "Databases & Vector Stores": ["PostgreSQL", "MongoDB", "SQLite", "Redis", "ChromaDB", "FAISS"],
-  "Cloud & DevOps": ["Docker", "Vercel", "AWS"],
+  "Cloud & Developer Tools": ["AWS", "Docker", "CI/CD", "Git & GitHub", "VS Code", "Vercel"],
   "Cybersecurity & AI Safety": ["OWASP Top 10", "VAPT", "SIEM (Wazuh)", "Prompt Injection Defense", "Guardrail Design"]
 };
 
