@@ -27,7 +27,16 @@ const toId = (str: string) => str.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     <ContactSection client:visible />
   </main>
   
-  <footer className="py-8 text-center text-text-muted text-sm border-t border-surface-border mt-20 relative z-10 bg-background/80 backdrop-blur-md">
-    <p>© {new Date().getFullYear()} {personalInfo.name}. All rights reserved.</p>
+  <footer className="py-10 border-t border-surface-border mt-20 relative z-10 bg-background/80 backdrop-blur-md">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="text-text-muted text-sm font-medium">
+        © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
+      </div>
+      <div className="flex items-center gap-6 text-sm text-text-muted">
+        <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
+        <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
+        <a href={`mailto:${personalInfo.name} <${personalInfo.email}>`} className="hover:text-primary transition-colors">Email</a>
+      </div>
+    </div>
   </footer>
 </Layout>

@@ -24,7 +24,7 @@ const ContactSection = () => {
           <motion.a 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href={`mailto:${personalInfo.email}`}
+            href={`mailto:${personalInfo.name} <${personalInfo.email}>`}
             className="inline-flex items-center justify-center px-10 py-5 text-lg font-bold rounded-2xl text-white bg-primary hover:bg-primary-light transition-all shadow-[0_0_40px_rgba(79,70,229,0.4)] hover:shadow-[0_0_60px_rgba(79,70,229,0.6)]"
           >
             Say Hello
