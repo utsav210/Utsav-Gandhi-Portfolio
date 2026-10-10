@@ -14,20 +14,20 @@ export const skills = {
   "AI & Machine Learning": [
     "TensorFlow", "scikit-learn", "XGBoost", "AdaBoost", "Gradient Boosting",
     "Random Forest", "Bagging & Stacking", "K-Means", "DBSCAN", 
-    "Hyperparameter Tuning", "SVM", "Pandas", "NumPy"
+    "Hyperparameter Tuning", "SVM", "Pandas", "NumPy", "SMOTE", "PCA", "EDA"
   ],
   "GenAI & Agentic AI": [
     "Large Language Models (LLMs)", "Agentic Orchestration", "LangChain", 
     "LangGraph", "CrewAI", "qLoRA", "PEFT", "Hugging Face", 
-    "Transformers", "RAG", "Prompt Engineering", "Claude", "Mistral AI", "Groq API"
+    "Transformers", "RAG", "Prompt Engineering", "Claude", "Mistral AI", "Groq API", "Tavily API", "OpenAI API", "Multi-Agent Systems"
   ],
   "Software Engineering": [
     "Python", "JavaScript", "TypeScript", "Data Structures & Algorithms (DSA)", 
-    "React.js", "Django", "Node.js", "FastAPI", "Pydantic"
+    "React.js", "Next.js", "Django", "Node.js", "FastAPI", "Pydantic", "Tailwind CSS", "NextAuth.js", "Prisma", "Advanced OOP", "Metaclasses & Decorators"
   ],
-  "Databases & Vector Stores": ["PostgreSQL", "MongoDB", "SQLite", "Redis", "ChromaDB", "FAISS"],
+  "Databases & Vector Stores": ["PostgreSQL", "MongoDB", "SQLite", "NeonDB", "Redis", "ChromaDB", "FAISS"],
   "Cloud & Developer Tools": ["AWS", "Docker", "CI/CD", "Git & GitHub", "VS Code", "Vercel", "Antigravity"],
-  "Cybersecurity & AI Safety": ["OWASP Top 10", "VAPT", "SIEM (Wazuh)", "Prompt Injection Defense", "Guardrail Design"]
+  "Cybersecurity & AI Safety": ["OWASP Top 10", "VAPT", "SIEM (Wazuh)", "Prompt Injection Defense", "Guardrail Design", "CSP", "2FA & Identity", "Rate Limiting", "Cryptography"]
 };
 
 export const projects = [
@@ -50,35 +50,67 @@ export const projects = [
     demo: "#"
   },
   {
-    title: "Agentic AI with LangGraph",
+    title: "ResearchMind - Multi-Agent AI Research System",
     role: "AI Engineer",
-    timeline: "AY 2025–2026",
-    outcome: "Orchestrated complex, multi-pattern agent workflows with human-in-the-loop oversight to automate intelligent routing.",
-    problem: "Static LLM applications lack the ability to follow complex reasoning paths, pause for human approval, or route queries accurately based on intent.",
-    solution: "Implemented 5 distinct LangGraph patterns including conditional routing, self-reflection loops, and external tool calling, backed by state persistence.",
-    technologies: ["LangGraph", "LangChain", "Groq", "Mistral AI", "FAISS", "Streamlit"],
+    timeline: "2024",
+    outcome: "Orchestrated a team of specialized AI agents to autonomously research, scrape, draft reports, and provide critical self-feedback.",
+    problem: "Manual deep-dive research is time-consuming and often misses real-time information or lacks a structured critical review.",
+    solution: "Built a dual-interface (CLI & Streamlit) multi-agent system utilizing LangChain, Tavily API for real-time web search, and specialized Writer & Critic chains.",
+    technologies: ["LangChain", "Streamlit", "Tavily API", "OpenAI API", "Python", "Multi-Agent Systems"],
     highlights: [
-      "Automated a human-in-the-loop approval flow using LangGraph interrupts and MemorySaver.",
-      "Enabled an intent-classification node that routes queries across 3 domain-specific FAISS retrievers.",
-      "Integrated Tavily search for self-reflection loops and dynamic tool calling."
+      "Designed a Search Agent for autonomous web querying and a Reader Agent for deep content extraction.",
+      "Implemented Writer and Critic chains for drafting structured reports and iteratively scoring/improving them.",
+      "Delivered a responsive Streamlit UI for seamless human-AI interaction during the research process."
     ],
-    github: "https://github.com/utsav210",
+    github: "https://github.com/utsav210/ResearchMind-Multi-Agent-Research-System",
     demo: "#"
   },
   {
-    title: "RAG-Based AI Book Assistant",
-    role: "AI Engineer",
-    timeline: "Jul 2026 – Aug 2026",
-    outcome: "Built a highly accurate document Q&A pipeline that strictly grounds responses in source material to minimize hallucinations.",
-    problem: "Standard LLMs hallucinate when asked about specific, private document contents without a proper retrieval mechanism.",
-    solution: "Created a PDF ingestion and retrieval pipeline using overlapping-context chunking and MMR to deliver context-aware answers.",
-    technologies: ["LangChain", "Mistral AI", "ChromaDB", "PyMuPDF", "Streamlit"],
+    title: "WasteWise - Sustainable Food Redistribution",
+    role: "Full Stack Developer",
+    timeline: "2024",
+    outcome: "Developed a comprehensive platform to bridge the gap between food donors and NGOs, promoting sustainability through composting.",
+    problem: "Surplus food is wasted while communities face hunger, and rotting food contributes to environmental degradation.",
+    solution: "Engineered a Next.js application with NextAuth.js for secure authentication, connecting donors with those in need and managing composting pipelines.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Prisma", "NextAuth.js", "Radix UI", "TypeScript"],
     highlights: [
-      "Grounded generated answers strictly in source documents using MMR (Maximal Marginal Relevance) retrieval.",
-      "Achieved 98% response accuracy by reducing hallucinated responses.",
-      "Shipped a Streamlit front-end enabling PDF upload and natural-language Q&A."
+      "Built a modern, accessible UI using Tailwind CSS and Radix UI (shadcn/ui).",
+      "Implemented secure, role-based user authentication and session management via NextAuth.js.",
+      "Designed relational schemas using Prisma ORM to effectively track food donations and composting metrics."
     ],
-    github: "https://github.com/utsav210",
+    github: "https://github.com/utsav210/WasteWise",
+    demo: "#"
+  },
+  {
+    title: "e-Learning Management System",
+    role: "Backend & Security Engineer",
+    timeline: "2023 - 2024",
+    outcome: "Built a highly secure, feature-rich LMS supporting role-based access for admins, teachers, and students with robust assessment tools.",
+    problem: "Educational platforms often lack strict security measures, making them vulnerable to unauthorized access and data breaches.",
+    solution: "Developed a Django-based LMS integrating enterprise-grade security features, 2FA, and strict role-based data isolation.",
+    technologies: ["Django", "Python", "Bootstrap 5", "jQuery", "Chart.js", "PostgreSQL"],
+    highlights: [
+      "Enforced strict table-specific authentication with OTP-based Two-Factor Authentication (2FA) and rate limiting.",
+      "Implemented comprehensive security headers (CSP, HSTS, X-Frame-Options) and PBKDF2/Argon2 password hashing.",
+      "Developed rich assessment tools and analytics dashboards using Chart.js for teachers to track student performance."
+    ],
+    github: "https://github.com/utsav210/e-Learning-Management-System",
+    demo: "#"
+  },
+  {
+    title: "LangChain Agents Lab",
+    role: "AI Engineer",
+    timeline: "2024",
+    outcome: "Created a progressive laboratory of LangChain agentic patterns, from basic LCEL chains to production-ready middleware agents.",
+    problem: "Understanding and implementing advanced agentic behaviors like self-reflection and human-in-the-loop workflows is highly complex.",
+    solution: "Developed a modular architecture demonstrating RunnableParallel, custom tool calling, and human approval loops using Mistral AI.",
+    technologies: ["LangChain", "Mistral AI", "LCEL", "Tavily API", "Python", "FAISS"],
+    highlights: [
+      "Engineered a full human-in-the-loop approval workflow with state persistence and middleware (@wrap_tool_call).",
+      "Integrated real-time APIs (Tavily, OpenWeatherMap) mapped dynamically to LLM tool bindings.",
+      "Demonstrated complex execution patterns including Passthrough Chains and multi-stage parallel generation."
+    ],
+    github: "https://github.com/utsav210/langchain-agents-lab",
     demo: "#"
   }
 ];
